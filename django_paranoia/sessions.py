@@ -2,7 +2,10 @@ from django.conf import settings
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.contrib.sessions.backends.cache import SessionStore as Base
 from django.core.cache import cache
-from django.utils.importlib import import_module
+try:
+    from django.utils.importlib import import_module
+except ImportError:
+    from importlib import import_module
 
 from signals import warning
 from flags import trans, SESSION_CHANGED
