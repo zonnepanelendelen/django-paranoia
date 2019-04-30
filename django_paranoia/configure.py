@@ -7,7 +7,7 @@ try:
 except ImportError:
     from importlib import import_module
 
-from signals import finished, process, warning
+from .signals import finished, process, warning
 
 log = logging.getLogger('paranoia')
 
