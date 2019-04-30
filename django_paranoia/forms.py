@@ -2,8 +2,8 @@ import re
 
 from django.forms import Form, ModelForm
 
-from flags import EXTRA_FIELDS, MISSING_FIELDS, UNEXPECTED_CHARACTER, trans
-from signals import warning
+from .flags import EXTRA_FIELDS, MISSING_FIELDS, UNEXPECTED_CHARACTER, trans
+from .signals import warning
 
 # Spot chars below 32, but allow, \t (9), \r (13) and \n (10).
 chars = range(0, 9) + range(11, 13) + range(14, 32)
