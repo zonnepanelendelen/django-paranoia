@@ -29,7 +29,7 @@ class Paranoid(object):
             self.detect_low(v)
 
     def detect_low(self, data):
-        if not isinstance(data, basestring):
+        if not isinstance(data, str):
             return
 
         if low_chars.search(data):
